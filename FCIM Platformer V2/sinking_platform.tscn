@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfjm1ry0oc31p"]
+
+[ext_resource type="Script" path="res://SinkingPlatform.gd" id="1_lghvl"]
+[ext_resource type="Texture2D" uid="uid://qxgth8qh8slh" path="res://2D Assets/LevelDesign/FCIM Game - tileable platform.png" id="2_cfrhr"]
+[ext_resource type="Texture2D" uid="uid://hqmre0w240tu" path="res://2D Assets/LevelDesign/Platform Piece Center.png" id="3_0d347"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt6v8"]
+size = Vector2(222, 76)
+
+[node name="SinkingPlatform" type="Area2D"]
+scale = Vector2(0.505, 0.505)
+script = ExtResource("1_lghvl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cfrhr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -137)
+shape = SubResource("RectangleShape2D_nt6v8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 19.802, 77.2277, -67.3267, 110.891, -106.931, 106.931, -166.337, -106.931, -166.337, -106.931, -110.891, -75.2475, -77.2277)
+
+[node name="PlatformPieceCenter" type="Sprite2D" parent="."]
+position = Vector2(0, 128.713)
+texture = ExtResource("3_0d347")
+
+[node name="PlatformPieceCenter2" type="Sprite2D" parent="."]
+position = Vector2(0, 277.228)
+texture = ExtResource("3_0d347")
+
+[node name="PlatformPieceCenter3" type="Sprite2D" parent="."]
+position = Vector2(0, 425.743)
+texture = ExtResource("3_0d347")
+
+[node name="PlatformPieceCenter4" type="Sprite2D" parent="."]
+position = Vector2(0, 574.257)
+texture = ExtResource("3_0d347")
+
+[node name="PlatformPieceCenter5" type="Sprite2D" parent="."]
+position = Vector2(0, 722.772)
+texture = ExtResource("3_0d347")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

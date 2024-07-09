@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://chw48benkm2vj"]
+
+[ext_resource type="Script" path="res://Trophy.gd" id="1_euep5"]
+[ext_resource type="Texture2D" uid="uid://c0i4do8wolaml" path="res://2D Assets/LevelDesign/trophy.png" id="2_nv8ek"]
+[ext_resource type="PackedScene" uid="uid://des7y0qdra8hl" path="res://Interaction/InteractionArea/InteractionArea.tscn" id="3_jn82f"]
+[ext_resource type="FontFile" uid="uid://63bjfcawprey" path="res://Fonts/Star Girl.otf" id="4_v05yh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g450n"]
+radius = 13.0
+height = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eotp"]
+size = Vector2(118, 110)
+
+[node name="Trophy" type="Area2D"]
+script = ExtResource("1_euep5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.22549, 0.22549)
+texture = ExtResource("2_nv8ek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 9)
+shape = SubResource("CapsuleShape2D_g450n")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_jn82f")]
+action_name = "Steal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_0eotp")
+
+[node name="Win" type="Label" parent="."]
+visible = false
+offset_left = -194.0
+offset_top = -168.0
+offset_right = 213.0
+offset_bottom = -26.0
+theme_override_fonts/font = ExtResource("4_v05yh")
+theme_override_font_sizes/font_size = 156
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://3rmjoefuqu1w"]
+
+[ext_resource type="Texture2D" uid="uid://bo6qhbd2i1iwt" path="res://2D Assets/BackgroundDesign/educational-games-colored-landscape copy.png" id="1_ld6a0"]
+
+[sub_resource type="TileSet" id="TileSet_vx14v"]
+
+[node name="Horizontal" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(581.375, 334)
+scale = Vector2(0.664397, 0.515556)
+texture = ExtResource("1_ld6a0")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_vx14v")
+format = 2

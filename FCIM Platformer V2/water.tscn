@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://xhpxrkmfdefp"]
+
+[ext_resource type="Script" path="res://water.gd" id="1_beaf3"]
+[ext_resource type="PackedScene" uid="uid://drqw5wm0cc2md" path="res://alligator.tscn" id="3_4x1y7"]
+[ext_resource type="Texture2D" uid="uid://b33w44ldjig4u" path="res://2D Assets/LevelDesign/WaterLayers/WaterLayer1.png" id="3_yak64"]
+[ext_resource type="Texture2D" uid="uid://bt6fta6b6r7ud" path="res://2D Assets/LevelDesign/WaterLayers/WaterLayer2.png" id="4_i82m2"]
+[ext_resource type="Texture2D" uid="uid://kihuymefgnej" path="res://2D Assets/LevelDesign/WaterLayers/WaterLayer3.png" id="5_wt7dd"]
+[ext_resource type="Texture2D" uid="uid://cekm5slyq1030" path="res://2D Assets/LevelDesign/WaterLayers/WaterLayer4.png" id="6_5yalh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgkj5"]
+size = Vector2(8612.77, 1003.02)
+
+[node name="Water" type="Area2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+position = Vector2(379, 303)
+scale = Vector2(0.68, 0.68)
+script = ExtResource("1_beaf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.00012, 233.088)
+scale = Vector2(0.235, 0.195)
+shape = SubResource("RectangleShape2D_hgkj5")
+
+[node name="Alligator" parent="." instance=ExtResource("3_4x1y7")]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(888.235, -16.9492)
+scale = Vector2(0.685, 0.685)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -296.61)
+zoom = Vector2(1.245, 1.245)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="WaterLayer1" type="CharacterBody2D" parent="."]
+position = Vector2(0, 13.32)
+
+[node name="WaterLayer1Sprite" type="Sprite2D" parent="WaterLayer1"]
+z_index = -1
+position = Vector2(66.1769, 84.547)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("3_yak64")
+
+[node name="WaterLayer2" type="CharacterBody2D" parent="."]
+position = Vector2(0, 11.475)
+
+[node name="WaterLayer2Sprite" type="Sprite2D" parent="WaterLayer2"]
+z_index = 1
+position = Vector2(66.1765, 106.91)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("4_i82m2")
+
+[node name="WaterLayer3" type="CharacterBody2D" parent="."]
+position = Vector2(0, 18.405)
+
+[node name="WaterLayer3Sprite" type="Sprite2D" parent="WaterLayer3"]
+modulate = Color(1, 1, 1, 0.819608)
+z_index = 2
+position = Vector2(66.1765, 161.148)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("5_wt7dd")
+
+[node name="WaterLayer4" type="CharacterBody2D" parent="."]
+
+[node name="WaterLayer4Sprite" type="Sprite2D" parent="WaterLayer4"]
+z_index = 3
+position = Vector2(66.1765, 220.339)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("6_5yalh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

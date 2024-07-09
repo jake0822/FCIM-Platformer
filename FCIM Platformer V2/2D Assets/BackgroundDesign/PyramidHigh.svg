@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Horizon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5817.51 4364.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #96f0fd;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        stroke-linecap: round;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2243.18" y1="2220.88" x2="2243.18" y2="1523.51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#96f0fd"/>
+      <stop offset="1" stop-color="#014e76"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="2243.18" y1="1352.7" x2="2243.18" y2="1509.04" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".27" stop-color="#fdda4d"/>
+      <stop offset="1" stop-color="#f99807"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points="1664.76 1985.99 2243.18 1334.56 2821.61 1985.99 1664.76 1985.99"/>
+  <line class="cls-4" x1="2463.78" y1="1583" x2="2340.13" y2="1583"/>
+  <line class="cls-4" x1="2525.65" y1="1652.69" x2="2340.13" y2="1652.69"/>
+  <line class="cls-4" x1="2412.89" y1="1583" x2="2412.89" y2="1652.69"/>
+  <polygon class="cls-2" points="2379.34 1487.91 2243.18 1334.56 2107.03 1487.91 2379.34 1487.91"/>
+  <polygon class="cls-3" points="1664.76 1985.99 2243.18 1334.56 2821.61 1985.99 1664.76 1985.99"/>
+  <line class="cls-4" x1="2422.94" y1="1702" x2="2240.63" y2="1702"/>
+  <line class="cls-4" x1="2391.59" y1="1775.06" x2="2240.63" y2="1775.06"/>
+  <line class="cls-4" x1="2323.57" y1="1702" x2="2323.57" y2="1775.06"/>
+</svg>

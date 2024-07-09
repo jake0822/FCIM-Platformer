@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlxbb56mvwhda"]
+
+[ext_resource type="Script" path="res://sTATICbODY 2d.gd" id="1_0bff5"]
+[ext_resource type="Texture2D" uid="uid://b0vl41rswedk0" path="res://2D Assets/LevelDesign/FCIM Game - CENTER tileable plaform brown.png" id="2_oles2"]
+[ext_resource type="Texture2D" uid="uid://bmfe62m52y7ox" path="res://2D Assets/LevelDesign/FCIM Game - tileable plaform brown.png" id="3_immqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oank"]
+size = Vector2(229, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7f2c"]
+size = Vector2(227, 72)
+
+[node name="DesertPlat" type="StaticBody2D"]
+script = ExtResource("1_0bff5")
+
+[node name="FcimGame-CenterTileablePlaformBrown" type="Sprite2D" parent="."]
+position = Vector2(0, 245)
+texture = ExtResource("2_oles2")
+
+[node name="FcimGame-TileablePlaformBrown" type="Sprite2D" parent="."]
+position = Vector2(0, 57)
+texture = ExtResource("3_immqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -24)
+shape = SubResource("RectangleShape2D_8oank")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.994
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -26)
+shape = SubResource("RectangleShape2D_c7f2c")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
