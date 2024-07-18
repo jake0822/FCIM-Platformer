@@ -1,0 +1,138 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk2c3beku6pcx"]
+
+[ext_resource type="Texture2D" uid="uid://chhvccslchwc7" path="res://2D Assets/LevelDesign/FCIM Game -Top platform piece .png" id="1_kfwta"]
+[ext_resource type="Script" path="res://VerticalFalling.gd" id="1_vlynb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rv6f"]
+size = Vector2(204, 60)
+
+[node name="VerticalRandom" type="Node2D"]
+script = ExtResource("1_vlynb")
+metadata/PlatSet = [NodePath("PlatformSetA"), NodePath("PlatformSetB"), NodePath("PlatformSetC"), NodePath("PlatformSetD"), NodePath("PlatformSetE")]
+metadata/MetaTest = 0
+
+[node name="PlatformSetA" type="Node2D" parent="."]
+visible = false
+
+[node name="PlatformA" type="Node2D" parent="PlatformSetA"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetA/PlatformA"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetA/PlatformA/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetA/PlatformA/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformA2" type="Node2D" parent="PlatformSetA"]
+position = Vector2(443, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetA/PlatformA2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetA/PlatformA2/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetA/PlatformA2/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformA3" type="Node2D" parent="PlatformSetA"]
+position = Vector2(863, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetA/PlatformA3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetA/PlatformA3/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetA/PlatformA3/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformSetB" type="Node2D" parent="."]
+visible = false
+
+[node name="PlatformB" type="Node2D" parent="PlatformSetB"]
+position = Vector2(213, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetB/PlatformB"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetB/PlatformB/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetB/PlatformB/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformB2" type="Node2D" parent="PlatformSetB"]
+position = Vector2(648, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetB/PlatformB2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetB/PlatformB2/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetB/PlatformB2/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformSetC" type="Node2D" parent="."]
+visible = false
+
+[node name="PlatformC" type="Node2D" parent="PlatformSetC"]
+position = Vector2(420, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetC/PlatformC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetC/PlatformC/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetC/PlatformC/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformSetD" type="Node2D" parent="."]
+visible = false
+
+[node name="PlatformD" type="Node2D" parent="PlatformSetD"]
+position = Vector2(11, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetD/PlatformD"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetD/PlatformD/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetD/PlatformD/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")
+
+[node name="PlatformSetE" type="Node2D" parent="."]
+visible = false
+
+[node name="PlatformE" type="Node2D" parent="PlatformSetE"]
+position = Vector2(932, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformSetE/PlatformE"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformSetE/PlatformE/StaticBody2D"]
+position = Vector2(104, -35)
+shape = SubResource("RectangleShape2D_3rv6f")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformSetE/PlatformE/StaticBody2D"]
+position = Vector2(103.5, -28)
+texture = ExtResource("1_kfwta")

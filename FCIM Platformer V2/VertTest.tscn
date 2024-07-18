@@ -1,0 +1,315 @@
+[gd_scene load_steps=20 format=3 uid="uid://lbt0g3rlexk5"]
+
+[ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="1_nlvwf"]
+[ext_resource type="FontFile" uid="uid://63bjfcawprey" path="res://Fonts/Star Girl.otf" id="2_j0r6s"]
+[ext_resource type="Texture2D" uid="uid://b5tragejh312c" path="res://2D Assets/BackgroundDesign/Asset 71.png" id="3_xnoa1"]
+[ext_resource type="PackedScene" uid="uid://cm7wvpmcso2kn" path="res://Player.tscn" id="4_im8el"]
+[ext_resource type="Texture2D" uid="uid://dxteyn8ml3oaw" path="res://2D Assets/BackgroundDesign/FCIM game background cropped desert full.png" id="5_6ftgc"]
+[ext_resource type="Texture2D" uid="uid://8vp4i28j48r2" path="res://2D Assets/BackgroundDesign/FCIM blue game background.png" id="6_ewo7c"]
+[ext_resource type="Texture2D" uid="uid://cj7d1nu01uarr" path="res://2D Assets/BackgroundDesign/FCIM game background cropped Swamp full.png" id="7_i1bts"]
+[ext_resource type="Texture2D" uid="uid://c22xo3bssh140" path="res://2D Assets/BackgroundDesign/Pyramid.png" id="8_ssj2c"]
+[ext_resource type="Texture2D" uid="uid://bo6qhbd2i1iwt" path="res://2D Assets/BackgroundDesign/educational-games-colored-landscape copy.png" id="9_car7d"]
+[ext_resource type="Texture2D" uid="uid://dncv7b2h2w5m7" path="res://2D Assets/BackgroundDesign/Tree + reflection.png" id="10_0kjcx"]
+[ext_resource type="Texture2D" uid="uid://cvpt2xynlllgy" path="res://2D Assets/BackgroundDesign/Cloud(1).png" id="11_1rg5b"]
+[ext_resource type="Texture2D" uid="uid://r2msqoukydbp" path="res://2D Assets/FCIM Marketing/CreativeProduction.svg" id="12_xg5lx"]
+[ext_resource type="Texture2D" uid="uid://uef6ef7pdwqk" path="res://2D Assets/FCIM Marketing/CenterOperations.svg" id="13_qlamg"]
+[ext_resource type="Texture2D" uid="uid://b0wowfle63qri" path="res://2D Assets/FCIM Marketing/InstructionalDevelopment.svg" id="14_2p1sb"]
+[ext_resource type="Texture2D" uid="uid://by2tcvjqtdq8w" path="res://2D Assets/FCIM Marketing/Measurement&Evaluation.svg" id="15_rj4y8"]
+[ext_resource type="Texture2D" uid="uid://bstdla8d1xvdu" path="res://2D Assets/FCIM Marketing/ResearchPartnerships.svg" id="16_527fq"]
+[ext_resource type="Texture2D" uid="uid://c1kn3tujgikc0" path="res://2D Assets/FCIM Marketing/TechnicalProduction.svg" id="17_b6oxl"]
+[ext_resource type="PackedScene" uid="uid://xhpxrkmfdefp" path="res://water.tscn" id="18_6yojr"]
+[ext_resource type="PackedScene" uid="uid://bk2c3beku6pcx" path="res://VerticalRandom.tscn" id="19_dc2rh"]
+
+[node name="VertTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(-10864.7, 300)
+zoom = Vector2(0.965, 0.965)
+
+[node name="Node2D" type="Node2D" parent="Camera2D"]
+z_index = 10
+position = Vector2(0, -40.965)
+
+[node name="PauseMenu" parent="Camera2D/Node2D" instance=ExtResource("1_nlvwf")]
+visible = false
+z_index = 10
+
+[node name="Label" type="Label" parent="Camera2D/Node2D"]
+z_index = 6
+offset_left = 433.34
+offset_top = -280.175
+offset_right = 577.34
+offset_bottom = -197.175
+theme_override_fonts/font = ExtResource("2_j0r6s")
+theme_override_font_sizes/font_size = 61
+text = "1/8"
+
+[node name="Scoreboard" type="Sprite2D" parent="Camera2D/Node2D"]
+z_index = 1
+position = Vector2(482.567, -255.174)
+scale = Vector2(0.423, 0.423)
+texture = ExtResource("3_xnoa1")
+
+[node name="Player" parent="." instance=ExtResource("4_im8el")]
+position = Vector2(0, 208)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-1570, 53)
+motion_scale = Vector2(0.405, 0)
+
+[node name="FcimGameBackground" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-487, 260)
+scale = Vector2(0.499445, 0.499444)
+texture = ExtResource("5_6ftgc")
+
+[node name="FcimGameBackground2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-3244, 260)
+scale = Vector2(-0.499, 0.499)
+texture = ExtResource("6_ewo7c")
+
+[node name="FcimGameBackground3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(4901, 260)
+rotation = 3.14159
+scale = Vector2(-0.499, -0.499)
+texture = ExtResource("7_i1bts")
+
+[node name="Pyramid" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+z_index = -6
+position = Vector2(222, 162)
+scale = Vector2(0.708835, 0.708835)
+texture = ExtResource("8_ssj2c")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+z_index = -10
+position = Vector2(584, 358)
+scale = Vector2(0.651473, 0.608438)
+texture = ExtResource("9_car7d")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+z_index = -6
+position = Vector2(770, 196)
+texture = ExtResource("10_0kjcx")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+z_index = -6
+position = Vector2(97, 253)
+scale = Vector2(0.548246, 0.548246)
+texture = ExtResource("10_0kjcx")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+visible = false
+z_index = -6
+position = Vector2(959, 217)
+scale = Vector2(0.464, 0.464)
+texture = ExtResource("8_ssj2c")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.47, 0.47)
+
+[node name="Clouds vv" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(434, 9.53674e-07)
+scale = Vector2(0.908333, 0.908333)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1270, 121)
+scale = Vector2(0.466944, 0.466944)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(246, 103)
+scale = Vector2(0.391667, 0.391667)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(18, 39)
+scale = Vector2(0.7125, 0.7125)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(788, 56)
+scale = Vector2(0.683333, 0.683333)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1418, 42)
+scale = Vector2(0.683333, 0.683333)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1897, 71)
+scale = Vector2(0.683333, 0.683333)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(3232, 51)
+scale = Vector2(0.433608, 0.391667)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(3082, 82)
+scale = Vector2(0.636087, 0.625)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(2508, 27)
+scale = Vector2(0.561983, 0.520833)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(3710, 140)
+scale = Vector2(0.636087, 0.625)
+texture = ExtResource("11_1rg5b")
+centered = false
+
+[node name="CreativeProduction" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-3497, 140)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("12_xg5lx")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/CreativeProduction"]
+offset_left = -663.412
+offset_top = 909.331
+offset_right = 688.588
+offset_bottom = 1102.33
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Creative Production"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterOperations" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-1870, 160)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("13_qlamg")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/CenterOperations"]
+offset_left = -663.412
+offset_top = 909.331
+offset_right = 688.588
+offset_bottom = 1102.33
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Center Operations"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Instructional Development" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-611, 160)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("14_2p1sb")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/Instructional Development"]
+offset_left = -926.488
+offset_top = 932.207
+offset_right = 974.512
+offset_bottom = 1125.21
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Instructional Developement"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Measurement & Evaluation" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
+z_index = -1
+position = Vector2(2879, 72)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("15_rj4y8")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/Measurement & Evaluation"]
+visible = false
+offset_left = -1006.55
+offset_top = 932.207
+offset_right = 894.445
+offset_bottom = 1125.21
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Measurement & Evaluation"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ResearchPartnerships" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
+z_index = -1
+position = Vector2(3506, 99)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("16_527fq")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/ResearchPartnerships"]
+visible = false
+offset_left = -1006.55
+offset_top = 932.207
+offset_right = 894.445
+offset_bottom = 1125.21
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Research Partnerships"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TechnicalProduction" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
+z_index = -1
+position = Vector2(4085, 115)
+scale = Vector2(0.174854, 0.174854)
+texture = ExtResource("17_b6oxl")
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer2/TechnicalProduction"]
+offset_left = -1006.55
+offset_top = 932.207
+offset_right = 894.445
+offset_bottom = 1125.21
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 141
+text = "Technical Production"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Water" parent="." instance=ExtResource("18_6yojr")]
+position = Vector2(-8, 618)
+
+[node name="VerticalRandom2" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, 57)
+
+[node name="VerticalRandom" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, 353)
+
+[node name="VerticalRandom3" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, -174)
+
+[node name="VerticalRandom4" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, -384)
+
+[node name="VerticalRandom5" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, -567)
+
+[node name="VerticalRandom6" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(0, -777)
