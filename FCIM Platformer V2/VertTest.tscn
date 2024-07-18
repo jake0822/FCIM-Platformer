@@ -21,10 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://bk2c3beku6pcx" path="res://VerticalRandom.tscn" id="19_dc2rh"]
 
 [node name="VertTest" type="Node2D"]
+position = Vector2(-5717, -189)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-position = Vector2(-10864.7, 300)
+position = Vector2(15, 300)
 zoom = Vector2(0.965, 0.965)
 
 [node name="Node2D" type="Node2D" parent="Camera2D"]
@@ -115,6 +115,7 @@ texture = ExtResource("8_ssj2c")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-5717, -189)
 motion_scale = Vector2(0.47, 0.47)
 
 [node name="Clouds vv" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
@@ -296,20 +297,56 @@ metadata/_edit_use_anchors_ = true
 [node name="Water" parent="." instance=ExtResource("18_6yojr")]
 position = Vector2(-8, 618)
 
-[node name="VerticalRandom2" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, 57)
-
 [node name="VerticalRandom" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, 353)
+position = Vector2(-556, 371)
+
+[node name="VerticalRandom2" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, 216)
 
 [node name="VerticalRandom3" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, -174)
+position = Vector2(-560, 43)
 
 [node name="VerticalRandom4" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, -384)
+position = Vector2(-556, -113)
 
 [node name="VerticalRandom5" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, -567)
+position = Vector2(-556, -230)
 
 [node name="VerticalRandom6" parent="." instance=ExtResource("19_dc2rh")]
-position = Vector2(0, -777)
+position = Vector2(-556, -403)
+
+[node name="VerticalRandom7" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, -596)
+
+[node name="VerticalRandom8" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, -751)
+
+[node name="VerticalRandom9" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-560, -924)
+
+[node name="VerticalRandom10" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, -1080)
+
+[node name="VerticalRandom11" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, -1197)
+
+[node name="VerticalRandom12" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-556, -1370)
+
+[node name="VerticalRandom13" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-551, -1575)
+
+[node name="VerticalRandom14" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-551, -1730)
+
+[node name="VerticalRandom15" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-555, -1903)
+
+[node name="VerticalRandom16" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-551, -2059)
+
+[node name="VerticalRandom17" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-551, -2176)
+
+[node name="VerticalRandom18" parent="." instance=ExtResource("19_dc2rh")]
+position = Vector2(-551, -2349)

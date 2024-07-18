@@ -12,7 +12,7 @@ metadata/PlatSet = [NodePath("PlatformSetA"), NodePath("PlatformSetB"), NodePath
 metadata/MetaTest = 0
 
 [node name="PlatformSetA" type="Node2D" parent="."]
-visible = false
+process_mode = 4
 
 [node name="PlatformA" type="Node2D" parent="PlatformSetA"]
 
@@ -56,7 +56,7 @@ position = Vector2(103.5, -28)
 texture = ExtResource("1_kfwta")
 
 [node name="PlatformSetB" type="Node2D" parent="."]
-visible = false
+process_mode = 4
 
 [node name="PlatformB" type="Node2D" parent="PlatformSetB"]
 position = Vector2(213, -1)
@@ -87,7 +87,7 @@ position = Vector2(103.5, -28)
 texture = ExtResource("1_kfwta")
 
 [node name="PlatformSetC" type="Node2D" parent="."]
-visible = false
+process_mode = 4
 
 [node name="PlatformC" type="Node2D" parent="PlatformSetC"]
 position = Vector2(420, -1)
@@ -104,7 +104,7 @@ position = Vector2(103.5, -28)
 texture = ExtResource("1_kfwta")
 
 [node name="PlatformSetD" type="Node2D" parent="."]
-visible = false
+process_mode = 4
 
 [node name="PlatformD" type="Node2D" parent="PlatformSetD"]
 position = Vector2(11, -1)
@@ -121,7 +121,7 @@ position = Vector2(103.5, -28)
 texture = ExtResource("1_kfwta")
 
 [node name="PlatformSetE" type="Node2D" parent="."]
-visible = false
+process_mode = 4
 
 [node name="PlatformE" type="Node2D" parent="PlatformSetE"]
 position = Vector2(932, -1)

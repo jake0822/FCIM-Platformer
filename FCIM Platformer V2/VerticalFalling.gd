@@ -7,16 +7,20 @@ var x = 0
 var pickNode
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	playerSink = true
+	#playerSink = true
 	sinking = true
 	var mT = get_meta("MetaTest")
 	pickNode = get_meta("PlatSet")
 	var rng = RandomNumberGenerator.new()
 	var indexPick = rng.randi_range(0,pickNode.size()-1)
 	var n = get_meta("PlatSet" )[indexPick]
-	#i dunno how godot does active and inactive states, Jake, lol
-	#i tried, but i need to look at the godot manual more
-	#n.set_visible(true)
+	var setCount = get_node(n).get_child_count()
+	for i in pickNode.size():
+		if i!=indexPick:
+			get_node(pickNode[i]).set_visible(false)
+		
+	get_node(n).process_mode = Node.PROCESS_MODE_INHERIT
+	get_node(n).set_visible(true)
 	
 	pass # Replace with function body.
 

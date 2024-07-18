@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 var SPEED = 16000.0
 const DASHSPEED = 1000
-@export var JUMP_VELOCITY = -400.0
+@export var JUMP_VELOCITY = -400.0 -200.0
 @export var WATER_JUMP_VELOCITY = -800
 
 var cheats = false
